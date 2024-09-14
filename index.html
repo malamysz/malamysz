@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowa Liczba</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #number {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="number">Kliknij przycisk, aby zobaczyć losową liczbę</div>
+    <button onclick="generateRandomNumber()">Generuj Liczbę</button>
 
+    <script>
+        function generateRandomNumber() {
+            // Generuj losową liczbę od 1 do 10
+            var randomNumber = Math.floor(Math.random() * 10) + 1;
+            // Wyświetl liczbę w elemencie o id "number"
+            document.getElementById('number').innerText = randomNumber;
+        }
+    </script>
+</body>
+</html>
